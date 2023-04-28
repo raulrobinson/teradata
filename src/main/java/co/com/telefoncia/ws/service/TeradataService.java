@@ -1,4 +1,4 @@
-package co.com.telefoncia.teradatadwh;
+package co.com.telefoncia.ws.service;
 
 public interface TeradataService {
     Object GetDataForQuery(String query);

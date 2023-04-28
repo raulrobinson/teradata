@@ -1,12 +1,13 @@
-package co.com.telefoncia.teradatadwh;
+package co.com.telefoncia.ws.service.impl;
 
+import co.com.telefoncia.ws.service.TeradataService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.sql.*;
 
 @Service
-public class TeradataServiceImpl implements TeradataService{
+public class TeradataServiceImpl implements TeradataService {
 
     @Value("${teradata.db.url}")
     private String DB_URL;
