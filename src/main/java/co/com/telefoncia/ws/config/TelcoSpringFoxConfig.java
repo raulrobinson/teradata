@@ -16,15 +16,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-/**
- * **********************
- * **** NO BORRAR!!! ****
- * **********************
- * CLASS CONFIGURATION SWAGGER DOCUMENTATION REST.
- * @autor: COE-Arquitectura-Telefonica
- * @date: 17-02-2023
- * @version 3.0.0
- */
 @Component
 @Configuration
 public class TelcoSpringFoxConfig {

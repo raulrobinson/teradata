@@ -9,17 +9,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
-/**
- * **********************
- * **** NO BORRAR!!! ****
- * **********************
- * 
- * CLASS CONFIGURATION SECURITY REST.
- * 
- * @autor: COE-Arquitectura-Telefonica
- * @date: 17-02-2023
- * @version 3.0.0
- */
 @Configuration
 public class TelcoSpringSecurityConfig {
 

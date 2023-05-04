@@ -1,6 +1,5 @@
 package co.com.telefoncia.ws.controller;
 
-import co.com.telefoncia.ws.dto.RequestDTO;
 import co.com.telefoncia.ws.service.TeradataService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
