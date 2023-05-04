@@ -1,10 +1,15 @@
 package co.com.telefoncia.ws.dto;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
+
+import java.io.Serializable;
 
 @Data
+@Getter
+@Setter
 @Builder
-public class RequestDTO {
+@AllArgsConstructor
+@NoArgsConstructor
+public class RequestDTO implements Serializable {
     private String query;
 }

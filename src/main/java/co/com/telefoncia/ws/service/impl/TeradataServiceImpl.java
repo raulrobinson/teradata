@@ -1,5 +1,6 @@
 package co.com.telefoncia.ws.service.impl;
 
+import co.com.telefoncia.ws.dto.RequestDTO;
 import co.com.telefoncia.ws.service.TeradataService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,7 +22,16 @@ public class TeradataServiceImpl implements TeradataService {
     private String PASS;
 
     @Override
-    public Object GetDataForQuery(String query) {
+    public Object getCustomQueryByRequestParam(String query) {
+        return queryExecute(query);
+    }
+
+    @Override
+    public Object getCustomQueryByRequestBody(RequestDTO requestDTO) {
+        return queryExecute(requestDTO.getQuery());
+    }
+
+    private Object queryExecute(String query) {
 
         Connection conn = null;
         Statement stmt = null;
@@ -57,7 +67,7 @@ public class TeradataServiceImpl implements TeradataService {
                 } catch (SQLException e) { /* Ignored */}
             }
         }
-
         return null;
     }
+
 }
