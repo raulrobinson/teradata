@@ -5,6 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.util.HashMap;
+
 @SpringBootApplication
 public class AppWsApplication {
 
@@ -18,10 +20,11 @@ public class AppWsApplication {
         SpringApplication.run(AppWsApplication.class, args);
     }
 
-    @Bean
-    public Object GetCustomQuery() {
-        return teradataService.GetDataForQuery("SELECT * FROM dwh_view.cuentacorrienteproducto");
-    }
+
+    // @Bean
+    // public Object GetCustomQuery() {
+    //     return teradataService.GetDataForQuery("select * from dwh_view.cuentacorrienteproducto");
+    // }
 
 }
 

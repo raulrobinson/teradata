@@ -1,11 +1,10 @@
 package co.com.telefoncia.ws.controller;
 
+import co.com.telefoncia.ws.dto.RequestDTO;
 import co.com.telefoncia.ws.service.TeradataService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
@@ -18,8 +17,8 @@ public class TeradataController {
         this.teradataService = teradataService;
     }
 
-    @GetMapping
-    public Object GetCustomQuery(String query) {
+    @PostMapping(consumes = { MediaType.APPLICATION_FORM_URLENCODED_VALUE })
+    public Object GetCustomQuery(@RequestParam(name = "query") String query) {
         return teradataService.GetDataForQuery(query);
     }
 }

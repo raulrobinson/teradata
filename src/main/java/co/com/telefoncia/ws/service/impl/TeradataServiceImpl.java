@@ -1,11 +1,14 @@
 package co.com.telefoncia.ws.service.impl;
 
+import co.com.telefoncia.ws.dto.RequestDTO;
 import co.com.telefoncia.ws.service.TeradataService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.sql.*;
 
+@Slf4j
 @Service
 public class TeradataServiceImpl implements TeradataService {
 
@@ -33,8 +36,8 @@ public class TeradataServiceImpl implements TeradataService {
 
             // Extract data from result set
             while (rs.next()) {
+                log.info(String.format("setting: %s, value: %s", rs.getString(1), rs.getString(2)));
                 return String.format("setting: %s, value: %s", rs.getString(1), rs.getString(2));
-                //System.out.println(String.format("setting: %s, value: %s", rs.getString(1), rs.getString(2)));
             }
         } catch (SQLException e) {
             e.printStackTrace();
