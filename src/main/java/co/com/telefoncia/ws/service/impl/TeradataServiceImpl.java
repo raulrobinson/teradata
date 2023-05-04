@@ -46,7 +46,7 @@ public class TeradataServiceImpl implements TeradataService {
             // Extract data from result set
             while (rs.next()) {
                 log.info(String.valueOf(rs));
-                return String.format("setting: %s, value: %s", rs.getString(1), rs.getString(2));
+                return String.format("source_ini: %s, source_end: %s", rs.getString(3), rs.getString(4));
             }
 
         } catch (SQLException e) {
